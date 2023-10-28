@@ -2,16 +2,18 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>{{post. title}} - Blog</title>
+    <title>{{post.title}}</title>
 </head>
 <body>
 <nav>
-    <a href="/blog/">Blog</a>
+    <a href="/blog/">목록으로 가기</a>
 </nav>
+
 <h1>{{post.title}}</h1>
-<h2>{{post.created_at}}</h2>
-<p>{{post.content}}</p>
 <hr/>
-<h3>여기 댓글이 들어올 수 있겠죠?</h3>
+<p>{{post.content}}</p>
+<p>글쓴 시간 : {{post.created_at}}</p>
+<hr/>
+<h3>만들기 어렵네요</h3>
 </body>
 </html>
