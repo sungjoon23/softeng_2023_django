@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% if 'object_list' %}
+{% if object_list %}
 <h3>All my lists</h3>
 {% endif %}
 
 <ul>
-    {% for todolist in 'object_list' %}
+    {% for todolist in object_list %}
     <li>
-        <div
-            role="button"
-            onclick= "location.href ='{% url 'list' todolist_id %}'">
+        <div role="button"
+             onclick= "location.href ='{% url "list" todolist.id %}'">
             {{ todolist.title }}
         </div>
     </li>
@@ -22,7 +21,7 @@
     <input
         value="Add a new list"
         type="button"
-        onclick="location.href='{% url 'list-add' %}' "  />
+        onclick="location.href='{% url "list-add" %}' " />
     </p>
 {% endblock %}
 
