@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 {% load static %}
+
+
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Diary</title>
-    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}"
-          media="screen">
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}"media="screen">
+    <script src="https://kit.fontawesome.com/.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <h1>블로그 목록</h1>
+    {% if p.head_image %}
+
 
 {% for p in posts %}
     <hr/>

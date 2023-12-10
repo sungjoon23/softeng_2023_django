@@ -6,10 +6,11 @@ from django.views.generic import DetailView
 class PostList(ListView):
     model = Post
     ordering = '-pk'
+    template_name = "blog/post_list.theme.html"
 
 class PostDetail(DetailView):
     model = Post
-    template_name = 'blog/post_list.html'
+    template_name = 'blog/single_post_page.html'
 
 # def index(request):
 #     posts = Post.objects.all().order_by('-updated_at')
